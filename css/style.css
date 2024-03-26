@@ -1,0 +1,58 @@
+body {
+  background-color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Workbench";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.container_english {
+  height: 150px;
+  width: 250px;
+  overflow-wrap: normal;
+  background-color: #8a95a5;
+  font-size: 24px;
+}
+.container_english::placeholder {
+  color: white;
+  font-size: 26px;
+}
+.container_morse {
+  height: 150px;
+  width: 250px;
+  overflow-wrap: normal;
+  background-color: #b9c6ae;
+  font-size: 24px;
+}
+.container_morse::placeholder {
+  color: white;
+  font-size: 26px;
+}
+.container_button {
+  height: 50px;
+  width: 200px;
+  font-size: 26px;
+  background-color: #ff715b;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #a04c1b;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

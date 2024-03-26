@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morse Code Translator</title>
+    <script type="module" src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./scss/style.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Workbench&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="heading">Morse Code Translator</h1>
+    <div class="container">
+      <textarea
+        class="container_english"
+        name="englishText"
+        id="englishText"
+        cols="18"
+        rows="2"
+        placeholder="English text here..."
+      ></textarea>
+      <button class="container_button">Translate</button>
+      <textarea
+        class="container_morse"
+        name="morseText"
+        id="morseText"
+        cols="18"
+        rows="2"
+        placeholder="Morse code here..."
+        wrap="hard"
+      ></textarea>
+    </div>
+  </body>
+</html>
