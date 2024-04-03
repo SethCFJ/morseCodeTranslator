@@ -1,4 +1,5 @@
 // A to Z in Morse Code
+const englishTextField = document.getElementById("englishText");
 const morseValues = {
   A: ".-",
   B: "-...",
@@ -31,11 +32,14 @@ const convertToMorse = (string) => {
   const letters = string.split("");
   console.log(letters);
   return letters.reduce((total, curr) => {
-    if (!curr === " ") {
-      total.join("");
+    if (curr === " ") {
+      total += curr;
+      return total;
     }
-
-    total += morseValues[curr.toUpperCase()];
+    if (/^[A-Za-z ]*$/.test(curr) === false) {
+      throw new Error("Only accepts letters");
+    }
+    total += `${morseValues[curr.toUpperCase()]} `;
     console.log(total);
     return total;
   }, "");

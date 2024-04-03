@@ -1,4 +1,5 @@
 @use "./partials/mixins.scss";
+@use "./partials/queries.scss";
 body {
   background-color: #353535;
   display: flex;
@@ -10,20 +11,39 @@ body {
 }
 .heading {
   color: #ffffff;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   font-family: "Workbench";
+  @include queries.tablet {
+    font-size: 60px;
+  }
+  @include queries.laptop {
+    font-size: 70px;
+  }
 }
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
+  width: 90%;
+  @include queries.tablet {
+    flex-direction: row;
+    width: 90%;
+  }
+  @include queries.laptop {
+    flex-direction: row;
+    width: 90%;
+  }
+
   &_english {
     @include mixins.field;
     background-color: #8a95a5;
     font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px #666f78;
+    width: 40%;
     &::placeholder {
       color: white;
       font-size: 26px;
@@ -33,20 +53,26 @@ body {
     @include mixins.field;
     background-color: #b9c6ae;
     font-size: 24px;
-
+    border-radius: 10px;
+    box-shadow: 4px 4px 3px #7e8778;
+    width: 40%;
     &::placeholder {
       color: white;
       font-size: 26px;
     }
   }
   &_button {
-    height: 50px;
-    width: 200px;
-    font-size: 26px;
-    background-color: #ff715b;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px #a04c1b;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    &_toEng {
+      height: 50px;
+      width: 200px;
+      font-size: 26px;
+      background-color: #ff715b;
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px #a04c1b;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: bold;
+    }
   }
 }

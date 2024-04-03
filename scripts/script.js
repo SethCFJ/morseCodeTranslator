@@ -1,13 +1,34 @@
 // A to Z in Morse Code
 import convertToMorse from "./engToMorse.js";
+import convertToEnglish from "./morseToEng.js";
+console.log(convertToMorse("test test"));
 
-console.log(convertToMorse("testtest"));
-
-const button = document.querySelector(".container_button");
 const englishTextField = document.querySelector(".container_english");
-const morseTextField = document.querySelector(".morse_container");
+const morseTextField = document.querySelector(".container_morse");
 
-button.addEventListener("click", () => {
-  let englishText = englishTextField.value;
-  morseText.textContent = convertToMorse(englishText);
+const morse = /^[-. ]*$/;
+const letters = /^[A-Za-z ]*$/;
+englishTextField.addEventListener("keyup", (e) => {
+  if (
+    (letters.test(e.key) === true || e.key === "Backspace") &&
+    e.key != "Enter"
+  ) {
+    const englishText = englishTextField.value;
+    morseText.value = convertToMorse(englishText);
+  }
+  // else {
+  //   alert("Enter valid letters from A-Z");
+  //   morseTextField.value = "";
+  //   englishTextField.value = "";
+  // }
+});
+
+morseTextField.addEventListener("keyup", (e) => {
+  if (
+    (morse.test(e.key) === true || e.key === "Backspace") &&
+    e.key != "Enter"
+  ) {
+    const morseText = morseTextField.value;
+    englishText.value = convertToEnglish(morseText);
+  }
 });
