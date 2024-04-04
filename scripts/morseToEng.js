@@ -1,6 +1,5 @@
 // A to Z in morse code
-const morseTextField = document.querySelector(".container_morse");
-const englishTextField = document.querySelector(".container_english");
+// import { morseValues } from "../data/morseValues.js";
 const morse = /^[-. ]*$/;
 const morseValues = {
   A: ".-",

@@ -8,6 +8,11 @@ body {
   height: 100%;
 }
 
+.errorMsg {
+  color: red;
+  font-size: 25px;
+}
+
 .heading {
   color: #ffffff;
   font-size: 30px;
@@ -54,6 +59,7 @@ body {
   border-radius: 10px;
   box-shadow: 4px 4px 3px #666f78;
   width: 40%;
+  resize: none;
 }
 .container_english::placeholder {
   color: white;
@@ -68,6 +74,7 @@ body {
   border-radius: 10px;
   box-shadow: 4px 4px 3px #7e8778;
   width: 40%;
+  resize: none;
 }
 .container_morse::placeholder {
   color: white;
