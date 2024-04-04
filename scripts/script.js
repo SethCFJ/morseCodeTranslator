@@ -1,6 +1,5 @@
 import convertToMorse from "./engToMorse.js";
 import convertToEnglish from "./morseToEng.js";
-console.log(convertToMorse("test test"));
 
 const englishTextField = document.querySelector(".container_english");
 const morseTextField = document.querySelector(".container_morse");
