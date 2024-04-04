@@ -1,0 +1,16 @@
+$s: 768px;
+$m: 1440px;
+
+$lg: 2050px;
+
+@mixin tablet {
+  @media only screen and (min-width: $s) and (max-width: $m) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: ($m)) {
+    @content;
+  }
+}
